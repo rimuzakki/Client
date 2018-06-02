@@ -11,58 +11,58 @@
 
     <title>Navbar Template for Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Materialize core CSS -->
+    <link href="<?php echo base_url(); ?>assets/css/materialize.css" rel="stylesheet">
 
     <link href="<?php echo base_url(); ?>assets/css/fontawesome-all.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url(); ?>assets/css/navbar.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
-
-    <div class="container">
-
-      <!-- Static navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="<?php echo base_url(); ?>">CUSTOMER PANEL {CLIENT}</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <?php echo anchor('customer', 'Home', 'class="nav-link"'); ?>
-            </li>
-            <li class="nav-item">
-              <?php echo anchor('customer', 'list', 'class="nav-link"'); ?>
-            </li>
-            <li>
-              <?php echo anchor('customer/add', 'Entry', 'class="nav-link"'); ?>
-            </li>
-          </ul>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="<?php echo base_url(); ?>" class="brand-logo center">Dashboard</a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide">
+                <li>
+                  <?php echo anchor('customer', 'Home', 'class="nav-link"'); ?>
+                </li>
+                <li class="nav-item">
+                  <?php echo anchor('customer', 'list', 'class="nav-link"'); ?>
+                </li>
+                <li>
+                  <?php echo anchor('customer/add', 'Entry', 'class="nav-link"'); ?>
+                </li>
+            </ul>
+          </div>
         </div>
       </nav>
-    </div> <!-- /container -->
+
+    </div>
+      <ul class="sidenav" id="slide-out">
+        <li>
+          <?php echo anchor('customer', 'Home', 'class="nav-link"'); ?>
+        </li>
+        <!-- <li class="nav-item">
+          <?php echo anchor('customer', 'list', 'class="nav-link"'); ?>
+        </li> -->
+        <li>
+          <?php echo anchor('customer/add', 'Entry', 'class="nav-link"'); ?>
+        </li>
+      </ul>
+
 
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col m12">
           <?php echo $contents; ?>
         </div>
       </div>
@@ -74,8 +74,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?php echo base_url(); ?>assets/js/jquery.min.js"><\/script>')</script>
-    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+    <script src="<?php echo base_url(); ?>assets/js/materialize.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/style.js"></script>
   </body>
 </html>

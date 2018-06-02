@@ -23,12 +23,12 @@
 					foreach ($produks as $produk) {
 					?>
 					<tr>
-						<td width="10"><?php echo $no; ?></td>
-						<td><?php echo $produk->nama; ?></td>
-						<td><?php echo $produk->deskripsi; ?></td>
-						<td><?php echo $produk->kategori; ?></td>
-						<td><?php echo $produk->harga; ?></td>
-						<td width="20">
+						<td width="3%"><?php echo $no; ?></td>
+						<td width="20%"><?php echo $produk->nama; ?></td>
+						<td width="30%"><?php echo $produk->deskripsi; ?></td>
+						<td width="20%"><?php echo $produk->kategori; ?></td>
+						<td width="20%">Rp. <?php echo number_format($produk->harga,0,',','.'); ?>,-</td>
+						<td width="7%">
 							<?php 
 								echo anchor('produk/edit/'.$produk->id_produk,'<i class="material-icons">edit</i>', array('class'=>'btn waves-effect waves-light btn-small tooltipped', 'data-position'=>'top', 'data-tooltip'=>'Edit'));
 							?>
